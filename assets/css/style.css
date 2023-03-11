@@ -1,7 +1,8 @@
 :root 
 {
     --bgcolor: #232323;
-
+    --fontcolor: white;
+    --hovercolor: red;
 }
 
 * 
@@ -17,17 +18,19 @@ body
 
 nav
 {
+    background-color: var(--bgcolor);
     z-index: 99999;
-    background-color: red;
     display: flex;
     justify-content: space-evenly;
     position: fixed;
     width: 100%;
+    box-shadow: 0px 1px 30px 5px;
+    
 }
 
 .navDiv:nth-child(1)
 {
-    padding: 0;
+    padding: 1rem;
 }
 
 .navDiv
@@ -42,7 +45,7 @@ nav
 {
     font-size: 3rem;
     font-family: 'Pacifico';
-    
+    color: var(--fontcolor);
 }
 
 #navList
@@ -57,16 +60,54 @@ nav
 {
     text-decoration: none;
     font-family: 'BebasNeue';
-    color: black;
+    color: var(--fontcolor);
 }
 
-#chat
+#navList a:hover
 {
-    padding: 1rem;
-    background-color: transparent;
-    border: 2px solid black;
-    font-family: 'ZenDots';
-    cursor: pointer;
+    color: var(--hovercolor);
+    border-block: 10px solid var(--hovercolor);
+    border-radius: 10px;
+    transition: 200ms ease-in;
+}
+
+
+#socials
+{
+    display: flex;
+    gap: 2rem;
+}
+
+#socials a
+{
+    color: var(--fontcolor);
+    font-size: 2rem;
+}
+
+#socials a:hover
+{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#facebook:hover
+{
+    background: #4267B2;
+}
+
+#instagram:hover
+{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+
+#whatsapp:hover
+{
+    background: #25D366;
+}
+
+#twitter:hover
+{
+    background: #1DA1F2;
 }
 
 #hamburger
@@ -100,7 +141,7 @@ nav
         position: absolute;
         width: 43px;
         right: 0;
-        top: 0;
+        top: 1rem;
         transform: translate(-50%, 50%);
         aspect-ratio: 1/1;
         display: flex;
@@ -111,7 +152,7 @@ nav
     
     #hamburger span
     {
-        border-top: .2rem solid black;
+        border-top: .2rem solid var(--fontcolor);;
         width: 100%;
     }
 
