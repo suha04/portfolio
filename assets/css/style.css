@@ -1,0 +1,124 @@
+:root 
+{
+    --bgcolor: #232323;
+
+}
+
+* 
+{
+    margin: 0;
+}
+
+body 
+{
+    background-color: var(--bgcolor);
+}
+
+nav
+{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    height: 100px;
+}
+
+nav div
+{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.sideNav
+{
+    flex-basis: 30%;
+}
+
+#middleNav
+{
+  
+    flex-basis: 40%;
+    
+}
+
+#navList
+{
+    list-style: none;
+    display: inline-flex;
+    gap: clamp(10px, 2vw, 20px);
+    padding: 0;
+}
+
+.navElements
+{
+    text-decoration: none;
+    font-size: clamp(10px, 6vw, 30px);
+    color: black;
+    font-family: 'BebasNeue';
+}
+
+#navLogo
+{
+    font-size: clamp(20px, 20vw, 50px);
+    font-family: 'Pacifico';
+    color: black;
+}
+
+#navButton
+{
+    font-size: clamp(20px, 3vw, 30px);
+    background-color: transparent;
+    border: 2px solid black;
+    padding: 20px;
+    cursor: pointer;
+    font-family: 'ZenDots';
+}
+
+
+@media screen and (max-width: 850px)
+{
+
+.sideNav
+{
+    display: none;
+}
+
+#middleNav
+{
+  
+    flex-basis: 100%;
+    
+}
+
+#navList
+{
+    list-style: none;
+    display: inline-flex;
+    gap: clamp(10px, 2vw, 20px);
+    padding: 0;
+}
+
+.navElements
+{
+    text-decoration: none;
+    font-size: clamp(10px, 6vw, 30px);
+    color: black;
+    font-family: 'BebasNeue';
+}
+
+#navLogo
+{
+    font-size: clamp(20px, 20vw, 50px);
+    font-family: 'Pacifico';
+    color: black;
+}
+
+#navButton
+{
+    font-size: clamp(20px, 3vw, 30px);
+    background-color: transparent;
+    border: 2px solid black;
+    padding: 20px;
+    cursor: pointer;
+    font-family: 'ZenDots';
+}
+}
