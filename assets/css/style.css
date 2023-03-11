@@ -18,7 +18,7 @@ body
 
 nav
 {
-    background-color: var(--bgcolor);
+    /* background-color: var(--bgcolor); */
     z-index: 99999;
     display: flex;
     justify-content: space-evenly;
@@ -114,6 +114,58 @@ nav
 {
     display: none;
 }
+
+.container
+{
+    height: auto;
+    padding: 0 clamp(2rem, 2vw, 8rem);
+}
+
+.content
+{
+    min-height: 100vh;
+    display: flex;
+}
+
+.content section
+{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    justify-content: center;
+}
+
+#introduction div
+{
+    
+    margin: auto;
+    
+    
+}
+
+#introduction div h2
+{
+    font-size: clamp(3.5rem, 4vw, 6rem);
+    color: var(--fontcolor);
+    border-bottom: 2px solid var(--fontcolor);
+    font-family: 'BebasNeue';
+}
+
+#introduction div p
+{
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-family: 'Oswald';
+    color: var(--fontcolor);
+}
+
+#introduction div #desc
+{
+    font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+
+
+
 
 
 
@@ -212,7 +264,10 @@ nav
         position: absolute;
         transition: 200ms ease-out;
     }
-
+      
+      .content section {
+        flex-basis: auto;
+      }
 
 }
 
@@ -221,3 +276,52 @@ nav
 
 
 
+
+
+.icon-scroll,
+.icon-scroll:before {
+  position: absolute;
+  left: 50%;
+}
+
+.icon-scroll {
+  width: 40px;
+  height: 70px;
+  bottom: 10%;
+  box-shadow: inset 0 0 0 1px #fff;
+  border: 2px solid white;
+  border-radius: 25px;
+  transform: translateX(-50%);
+}
+
+.text-scroll
+{
+    color: var(--fontcolor);
+    position: absolute;
+    transform: translate(-8%, 400%);
+    font-family: 'BebasNeue';
+    width: 200px;
+}
+
+.icon-scroll:before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  margin-left: -4px;
+  top: 8px;
+  border-radius: 4px;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(46px);
+  }
+}
