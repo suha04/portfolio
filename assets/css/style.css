@@ -18,7 +18,7 @@ body
 
 nav
 {
-    /* background-color: var(--bgcolor); */
+    background-color: var(--bgcolor);
     z-index: 99999;
     display: flex;
     justify-content: space-evenly;
